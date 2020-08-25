@@ -62,10 +62,7 @@ public final class QueryUtils {
                 String mag = properties.getString("mag");
                 String time = properties.getString("time");
                 long timeInMilliseconds = Long.valueOf(time);
-                Date dateObject = new Date(timeInMilliseconds);
-                SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM DD, yyyy");
-                String dateToDisplay = dateFormatter.format(dateObject);
-                earthquakes.add(new EarthquakeData(place,mag, dateToDisplay));
+                earthquakes.add(new EarthquakeData(place,mag, timeInMilliseconds));
             }
 
         } catch (JSONException e) {

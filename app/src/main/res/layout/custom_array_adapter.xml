@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="3"
+    android:weightSum="4"
     android:padding="16dp">
 
     <TextView
@@ -32,6 +32,15 @@
         android:text="Feb2.2016"
         android:textSize="16dp"
         android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/time_txt"
+        android:layout_width="0dp"
+        android:textSize="16dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:text="3:00 PM" />
 
 
 
