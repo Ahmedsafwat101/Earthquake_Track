@@ -33,8 +33,7 @@ submitting a pull request through GitHub. Please see CONTRIBUTING.md for more de
 
  Walkthrough Gif
 ----------
-<img src='https://github.com/Ahmedsafwat101/Android_Me/blob/master/image.jpeg' title='image' width='' alt='image' />
-
+https://github.com/Ahmedsafwat101/Earthquake_Track/blob/master/Earthquake%20tarcker.gif
 License
 -------
 
