@@ -31,6 +31,10 @@ Support
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.
 
+ Walkthrough Gif
+----------
+<img src='https://github.com/Ahmedsafwat101/Android_Me/blob/master/image.jpeg' title='image' width='' alt='image' />
+
 License
 -------
 
