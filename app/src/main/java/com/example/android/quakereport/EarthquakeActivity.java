@@ -15,12 +15,15 @@
  */
 package com.example.android.quakereport;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.widget.ArrayAdapter;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -38,12 +41,30 @@ public class EarthquakeActivity extends AppCompatActivity {
 
 
         // Find a reference to the {@link ListView} in the layout
-        ListView earthquakeList = (ListView) findViewById(R.id.list);
+        final ListView earthquakeList = (ListView) findViewById(R.id.list);
         // Create a new {@link ArrayAdapter} of earthquakes
-        EarthquakeArrayAdapter adapter= new EarthquakeArrayAdapter(this,earthquakes);
+        final EarthquakeArrayAdapter adapter = new EarthquakeArrayAdapter(this, earthquakes);
         // Set the adapter on the {@link ListView}
         // so the list can be populated in the user interface
         earthquakeList.setAdapter(adapter);
+
+
+        //Set onClickListener to open web page contains more info
+        earthquakeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                EarthquakeData current = adapter.getItem(i);
+                String url = current.getUrl();
+                if (TextUtils.isEmpty(url))
+                    Toast.makeText(getApplicationContext(), "Error 404", Toast.LENGTH_LONG).show();
+                else {
+                    Intent intent= new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(url));
+                    startActivity(intent);
+                }
+            }
+        });
+
 
     }
 }
