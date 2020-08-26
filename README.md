@@ -33,7 +33,8 @@ submitting a pull request through GitHub. Please see CONTRIBUTING.md for more de
 
  Walkthrough Gif
 ----------
-https://github.com/Ahmedsafwat101/Earthquake_Track/blob/master/Earthquake%20tarcker.gif
+<img src='https://github.com/Ahmedsafwat101/Earthquake_Track/blob/master/Earthquake%20tarcker.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 License
 -------
 
